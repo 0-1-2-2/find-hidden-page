@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find the Hidden Page</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <h1>🎮 Find the Hidden Page</h1>
+            <p class="subtitle">Explore the page and find all hidden elements!</p>
+        </header>
+
+        <!-- Game Info -->
+        <div class="game-info">
+            <div class="info-box">
+                <span class="label">Found:</span>
+                <span class="value" id="foundCount">0</span>
+                <span class="label">/ 5</span>
+            </div>
+            <div class="info-box">
+                <span class="label">Time:</span>
+                <span class="value" id="timer">00:00</span>
+            </div>
+            <button class="btn-reset" onclick="resetGame()">Reset Game</button>
+        </div>
+
+        <!-- Instructions -->
+        <div class="instructions">
+            <h2>📋 How to Play:</h2>
+            <ul>
+                <li>Find all 5 hidden elements scattered across the page</li>
+                <li>Click on hidden elements to reveal them</li>
+                <li>Elements appear with hover effects and animations</li>
+                <li>Complete the game by finding them all!</li>
+            </ul>
+        </div>
+
+        <!-- Main Content Area -->
+        <main class="game-area">
+            <section class="content-section">
+                <h2>Welcome to the Game</h2>
+                <p>Start exploring! Look around the page carefully. Hidden elements are scattered in unexpected places.</p>
+                <p>Some might be hidden in plain sight, some might require hovering, and some might be tucked away in corners.</p>
+            </section>
+
+            <!-- Hidden Element 1 -->
+            <div class="hidden-element" id="hidden1" onclick="findElement(1)">
+                <div class="hidden-box">✨ Found One!</div>
+            </div>
+
+            <!-- Hidden Element 2 -->
+            <div class="hidden-element" id="hidden2" onclick="findElement(2)">
+                <div class="hidden-box">🌟 Second Find!</div>
+            </div>
+
+            <!-- Hidden Element 3 -->
+            <div class="hidden-element" id="hidden3" onclick="findElement(3)">
+                <div class="hidden-box">⭐ Great Job!</div>
+            </div>
+
+            <!-- Hidden Element 4 -->
+            <div class="hidden-element" id="hidden4" onclick="findElement(4)">
+                <div class="hidden-box">🎯 Almost There!</div>
+            </div>
+
+            <!-- Hidden Element 5 -->
+            <div class="hidden-element" id="hidden5" onclick="findElement(5)">
+                <div class="hidden-box">🏆 Last One!</div>
+            </div>
+        </main>
+
+        <!-- Victory Modal -->
+        <div class="modal" id="victoryModal">
+            <div class="modal-content">
+                <h2>🎉 Congratulations!</h2>
+                <p>You found all the hidden elements!</p>
+                <p class="final-time">Time: <span id="finalTime">00:00</span></p>
+                <button class="btn-play-again" onclick="resetGame()">Play Again</button>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>&copy; 2026 Find the Hidden Page Game | Built with HTML, CSS & JavaScript</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
